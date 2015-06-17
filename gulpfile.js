@@ -1,5 +1,7 @@
 'use strict';
 
+/* global __dirname*/
+
 var gulp = require('gulp');
 
 gulp.task('css-src', function () {
@@ -43,15 +45,39 @@ gulp.task('watch', ['css', 'js'], function () {
     gulp.watch(__dirname + '/src/js/*.js', ['js']);
 });
 
-gulp.task('server', ['watch'], function () {
+gulp.task('example-css', function () {
+    var less = require('gulp-less');
+
+    return gulp.src(__dirname + '/example/css/*.less')
+        .pipe(less())
+        .pipe(gulp.dest(__dirname + '/example/css'));
+});
+gulp.task('example-watch', ['example-css'], function () {
+    gulp.watch(__dirname + '/example/css/*.less', ['example-css']);
+});
+gulp.task('example-link-vendors', function () {
+    var symlink = require('gulp-symlink');
+
+    return gulp.src(__dirname + '/bower_components/')
+        .pipe(symlink(__dirname + '/example/vendors', {force: true}));
+});
+gulp.task('example-link-plugin', function () {
+    var symlink = require('gulp-symlink');
+
+    return gulp.src(__dirname + '/dist/')
+        .pipe(symlink(__dirname + '/example/plugin', {force: true}));
+});
+gulp.task('example-server', ['example-watch', 'example-link-vendors', 'example-link-plugin'], function () {
     var connect = require('gulp-connect');
 
     connect.server({
-        root: '.',
+        root: __dirname + '/example',
         port: 9000
     });
 });
 
 
+gulp.task('example', ['example-server']);
 gulp.task('build', ['css', 'js']);
+
 gulp.task('default', ['build']);

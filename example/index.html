@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="bower_components/selectize/dist/css/selectize.bootstrap3.css" rel="stylesheet">
-    <link href="css/selectize-caret-button-plugin.css" rel="stylesheet">
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/selectize/dist/css/selectize.bootstrap3.css" rel="stylesheet">
+    <link href="plugin/css/selectize-caret-button-plugin.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -308,26 +308,11 @@
         </table>
     </div>
 
-    <script src="bower_components/lodash/dist/lodash.min.js"></script>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="bower_components/selectize/dist/js/standalone/selectize.min.js"></script>
-    <script src="js/selectize-caret-button-plugin.js"></script>
-
-    <script type="text/javascript">
-        (function () {
-            $('select[name="C"]').selectize({
-                plugins: ['caret_button'],
-                valueField: 'title',
-                labelField: 'title',
-                searchField: 'title',
-                maxItems: 1,
-                openOnFocus: false,
-                createOnBlur: true,
-                selectOnTab: true,
-                placeholder: '- select -'
-            });
-        })();
-    </script>
+    <script src="vendors/lodash/dist/lodash.min.js"></script>
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendors/selectize/dist/js/standalone/selectize.min.js"></script>
+    <script src="plugin/js/selectize-caret-button-plugin.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -2,6 +2,7 @@
   "dependencies": {
     "bower": "*",
     "gulp": "*",
+    "gulp-symlink": "*",
     "gulp-connect": "*",
     "gulp-rename": "*",
     "gulp-uglify": "*",
