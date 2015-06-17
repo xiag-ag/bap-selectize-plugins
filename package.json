@@ -3,6 +3,9 @@
     "bower": "*",
     "gulp": "*",
     "gulp-connect": "*",
+    "gulp-rename": "*",
+    "gulp-uglify": "*",
+    "gulp-minify-css": "*",
     "gulp-less": "*"
   }
 }
