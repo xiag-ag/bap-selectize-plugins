@@ -9,6 +9,7 @@
 
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="bower_components/selectize/dist/css/selectize.bootstrap3.css" rel="stylesheet">
+    <link href="css/selectize-caret-button-plugin.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -311,10 +312,12 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/selectize/dist/js/standalone/selectize.min.js"></script>
+    <script src="js/selectize-caret-button-plugin.js"></script>
 
     <script type="text/javascript">
         (function () {
             $('select[name="C"]').selectize({
+                plugins: ['caret_button'],
                 valueField: 'title',
                 labelField: 'title',
                 searchField: 'title',
