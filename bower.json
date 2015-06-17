@@ -2,6 +2,7 @@
   "name": "bap-selectize-plugins",
   "dependencies": {
     "jquery": "~2.1.1",
+    "lodash": "~2.4.1",
     "bootstrap": "~3.2.0",
     "selectize": "0.12.0"
   }
