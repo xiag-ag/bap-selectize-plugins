@@ -47,10 +47,12 @@ Selectize.define('caret_button', function (options) {
             }
         });
 
-        original.apply(self, arguments);
+        var result = original.apply(self, _.rest(arguments));
 
         self.$caret_button = $button;
         self.$caret_icon = $icon;
         self.$wrapper.append($button);
+
+        return result;
     });
 });
