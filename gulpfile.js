@@ -77,7 +77,7 @@ gulp.task('example-server', ['example-watch', 'example-link-vendors', 'example-l
 });
 
 
-gulp.task('example', ['example-server']);
+gulp.task('example', ['watch', 'example-server']);
 gulp.task('build', ['css', 'js']);
 
 gulp.task('default', ['build']);
