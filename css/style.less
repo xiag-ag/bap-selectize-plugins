@@ -10,4 +10,25 @@
     outline: none;
     box-shadow: none;
   }
+  .selectize-control {
+    .selectize-input, .selectize-input.input-active {
+      display: block !important;
+      padding: 8px !important;
+      height: 36px !important;
+
+      background-color: #faf4e2 !important;
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+    .selectize-dropdown {
+      border-radius: 0;
+      margin: 0;
+      background-color: #faf4e2;
+
+      .option.active, .option.selected {
+        background-color: darken(#faf4e2, 10%);
+      }
+    }
+  }
 }

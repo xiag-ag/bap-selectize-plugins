@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/selectize/dist/css/selectize.bootstrap3.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -308,5 +309,21 @@
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/selectize/dist/js/standalone/selectize.min.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+            $('select[name="C"]').selectize({
+                valueField: 'title',
+                labelField: 'title',
+                searchField: 'title',
+                maxItems: 1,
+                openOnFocus: false,
+                createOnBlur: true,
+                selectOnTab: true,
+                placeholder: '- select -'
+            });
+        })();
+    </script>
 </body>
 </html>
