@@ -11,6 +11,9 @@
     box-shadow: none;
   }
   .selectize-control {
+    * {
+      color: #555;
+    }
     .selectize-input, .selectize-input.input-active {
       display: block !important;
       padding: 8px !important;
@@ -20,6 +23,13 @@
       border: none !important;
       outline: none !important;
       box-shadow: none !important;
+    }
+    &.multi {
+      .selectize-input .item {
+        &, &.active {
+          background-color: darken(#faf4e2, 10%);
+        }
+      }
     }
     .selectize-dropdown {
       border-radius: 0;
