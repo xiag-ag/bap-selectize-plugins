@@ -33,10 +33,6 @@ Selectize.define('caret_button', function (options) {
 
         return original.apply(self, _.rest(arguments));
     });
-    self.close = _.wrap(self.close, function (original) {
-        return original.apply(self, _.rest(arguments));
-    });
-
     self.setup = _.wrap(self.setup, function (original) {
         $button.on('click', function (e) {
             e.preventDefault();
