@@ -1,5 +1,15 @@
 $('select[name="C"]').selectize({
-    plugins: ['caret_button'],
+    plugins: {
+        caret_button: {},
+        quick_list: {
+            pinnedOptions: [
+                'Switzerland',
+                'Norfolk Island',
+                'Russian Federation',
+                'Madagascar'
+            ]
+        }
+    },
     valueField: 'id',
     labelField: 'title',
     searchField: 'title',
@@ -10,7 +20,17 @@ $('select[name="C"]').selectize({
     placeholder: '- select -'
 });
 $('select[name="D"]').selectize({
-    plugins: ['caret_button'],
+    plugins: {
+        caret_button: {},
+        quick_list: {
+            pinnedOptions: [
+                'Switzerland',
+                'Norfolk Island',
+                'Russian Federation',
+                'Madagascar'
+            ]
+        }
+    },
     valueField: 'id',
     labelField: 'title',
     searchField: 'title',
