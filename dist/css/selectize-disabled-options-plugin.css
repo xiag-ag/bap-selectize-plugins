@@ -1,0 +1,5 @@
+.selectize-dropdown.plugin-disabled_options .selectize-dropdown .option.disabled,
+.selectize-dropdown.plugin-disabled_options .selectize-dropdown .option[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
